@@ -1,0 +1,108 @@
+/* View CSS only for better comment reading experience */
+
+.paper {
+    background-image: -webkit-linear-gradient(left, rgba(255,85,91, .1), rgba(255,85,91, .1)),     /* right red border */
+                                          -webkit-linear-gradient(left, rgba(255,85,91, .8), rgba(255,85,91, .8)), 		/* left red border */
+                                          -webkit-linear-gradient(top, #fff, #fff),												 						/* white header, defined before lines to cover them */
+                                          -webkit-linear-gradient(top, #fff 0px, #fff 29px, #a6ffed 30px); 						/* light blue lines   */
+                                          /* 
+                                               the 2nd #fff should be 1px less than the #a6ffed, 
+                                               modify this to whatever line height you need,
+                                               be sure to modify the the background size below to match 
+                                          */
+      
+      background-size: 1px 1px,
+                                       1px 1px,
+                                       1px 50px, 
+                                       1px 30px; /* change this if you change the line height above */
+      background-position: 90%,  /* light red line, 90% from the left */
+                                               10%,  /* darker red line 10% from left */
+                                               0 0,
+                                                0px 43px;  /* Blue lines   */
+      background-repeat: repeat-y, repeat-y, repeat-x, repeat; /* Same order as above */
+      
+      border: 1px #ddd solid;
+      box-shadow: 0px 4px 100px 5px rgba(0,0,0,.5);
+      padding: 50px 5em 0 5em; /*  Push text down 50px */
+          
+      line-height: 30px;
+      margin: 50px auto;
+      position: relative;
+      width: 500px;
+  }
+  .paper h1,
+  .paper h2,
+  .paper h3 {
+      margin: 0;
+  }
+  
+  .paper .center,
+  .paper .center,
+  .paper .center {
+      text-align: center;
+  }
+  
+  .paper h1 {
+      font-size: 2em;
+      margin-top: -5px;
+      margin-bottom: 5px;
+  }
+  
+  .paper h2 {
+      font-size: 1.5em;
+      margin-top: -3px;
+      margin-bottom: 3px;
+  }
+  
+  .paper h3 {
+      font-size: 1.2em;
+      margin-top: -1px;
+      margin-bottom: 1px;
+  }
+  
+  .paper p {
+      margin: 0;
+      padding: 0 0 30px 0;
+      text-align: justify;
+  }
+  
+  .paper .serif {
+      font-family: serif;
+  }
+  
+  .paper .cursive {
+      font-family: cursive;
+  }
+  
+  
+  .paper p.indent {
+      text-indent: 3em;
+  }
+  
+  .paper p.small {
+      font-size: 10pt;
+  }
+  
+  .paper .date {
+      font-size: 0.8em;
+      position: absolute;
+      right: 6em;
+      top: 0;
+  }
+  
+  /* not important ;) */
+  body {
+    background-image: url(https://i.imgur.com/gdorO.png);
+    font-family: sans-serif;
+    padding-bottom: 50px;
+  }
+  
+  a {
+    color: #0ad;
+    text-decoration: none;
+  }
+  
+  abbr {
+    border-bottom: 1px #aaa dotted;
+    cursor: help;
+  }

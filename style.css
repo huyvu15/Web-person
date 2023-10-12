@@ -1,19 +1,121 @@
 :root {
-  --blue: #5ba5d4;
-  --dark-blue: #226c9a;
-  --nav: rgb(221, 238, 253);
+  --blue: #ffffff;
+  /* --dark-blue: #226c9a; */
+  --dark-blue: #008080;
+  --nav: #fcfcfc;
   /* --nav:#ccdeec; */
 }
 .white-text {
   color: rgb(229, 229, 229);
 }
 
+.color {
+  color:#333333;
+}
+
+/* Cursor Creation */
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid rgb(240, 161, 14);
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  /* Thay đổi giá trị left và top để đặt vị trí mặc định */
+  left: -20px;
+  top: -20px;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgb(251, 202, 26);
+  opacity: 0.3;
+  position: fixed;
+  /* Thay đổi giá trị left và top để đặt vị trí mặc định */
+  left: -10px;
+  top: -10px;
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+
+/* Hiệu ứng text ban đầu: */
+.typewriter h2 {
+  color: #000000;
+  font-family: monospace;
+  overflow: hidden;
+  /* border-right: .15em solid rgb(249, 248, 245); */
+  border-right: .15em solid rgb(0, 0, 0);
+  white-space: nowrap;
+  margin: 100; /* Thay đổi margin thành 0 để hiển thị bên trái */
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end);
+    /* blink-caret .50s step-end infinite; */
+  
+  font-size: 24px; /* Kích thước chữ lớn hơn */
+}
+
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  /* border-right: .15em solid orange; */
+  /* border-right: .15em solid rgb(0, 0, 0); */
+  white-space: nowrap;
+  margin: 100; /* Thay đổi margin thành 0 để hiển thị bên trái */
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end);
+    /* blink-caret .50s step-end infinite; */
+  
+  font-size: 39px; /* Kích thước chữ lớn hơn */
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+/* Background */
 .background-image {
   background-image: url('Photo/1.jpg'); /* Đường dẫn tới hình ảnh bạn muốn sử dụng làm nền */
   background-size: cover; /* Tự động điều chỉnh kích thước hình ảnh để nó phù hợp với kích thước thẻ */
   background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh nếu cần */
   /* Các thuộc tính khác tùy thuộc vào yêu cầu của bạn */
 }
+
+.background-image1 {
+  background-image: url('Photo/45.jpg'); /* Đường dẫn tới hình ảnh bạn muốn sử dụng làm nền */
+  background-size: cover; /* Tự động điều chỉnh kích thước hình ảnh để nó phù hợp với kích thước thẻ */
+  background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh nếu cần */
+}
+
+/* .background-image2 {
+  background-image: url('Photo/61.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+} */
+
+.background-image3 {
+  background-color: #ECE2D0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 * {
   margin: 0;
@@ -40,16 +142,22 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+
+
+
      
 /* Mục home  */
 .home {
-  background-image: url("Photo/guitar-bg.jpg");
+  background-image: url("Photo/61.jpg");
   /* background-image: url("adrian-korte-5gn2soeAc40-unsplash.jpg"); */
   background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
+
+
 
 .home-contents {
   margin-top: 250px;
@@ -65,8 +173,7 @@ html, body {
   overflow: auto;
   white-space: no-wrap;
   height: 8vh;
-  background: rgba(225, 231, 234, 0.6); /* Màu trong suốt mờ (điều chỉnh giá trị alpha) */
-  /* background-color: rgb(139, 176, 208); */
+  /* background: rgba(225, 231, 234, 0.6); Màu trong suốt mờ (điều chỉnh giá trị alpha) */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,12 +182,49 @@ html, body {
   backdrop-filter: blur(20px); /* Độ mờ cho nền trong suốt (điều chỉnh giá trị) */
 }
 
+/* Thêm hiệu ứng dấu gạch chân động */
+.navbar a {
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 100%; /* Bắt đầu với độ rộng 0% */
+  height: 2px;
+  background-color: #35a22c; /* Màu gạch chân khi di chuột vào */
+  transition: right 0.3s ease; /* Thêm hiệu ứng chuyển đổi chiều rộng */
+}
+
+.navbar a:hover::before {
+  right: 0; /* Khi di chuột vào, tăng chiều rộng về 100% */
+}
+
+
 .nav-logo {
   margin-left: 40px;
   font-weight: bolder;
   font-size: 1.8rem;
-  color: rgb(56, 69, 69);
+  /* font-family: 'Lobster', cursive;*/
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Playfair Display', serif;
+  color: #052305;
 }
+
+.nav-logo1 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Lobster', cursive;
+  color: rgb(236, 241, 250);
+  font-weight: 900;
+}
+
 
 .nav-contents {
   display: flex;
@@ -97,16 +241,13 @@ html, body {
 
 /* Khi nhấn vào nội dung thì nó chuyển sang màu */
 .nav-contents a:hover {
-  color: rgb(232, 82, 40);
+  color:  rgb(0, 255, 0); 
+  /* color: rgb(232, 82, 40);  */
+
   transform: scale(1.1);
 }
 
 
-/* Khi nhấn vào nội dung thì nó chuyển sang màu */
-.nav-contents a:hover {
-  color: rgb(232, 82, 40);
-  transform: scale(1.1);
-}
 
 
 /* Search bar  */
@@ -114,7 +255,7 @@ html, body {
   display: flex;
   align-items: center;
   margin-right: 40px;
-  background-color: rgba(255, 255, 255, 0.7); /* Màu nền trong suốt */
+  /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)); Màu nền gradient trong suốt */
   padding: 8px;
   border-radius: 4px;
 }
@@ -124,17 +265,19 @@ html, body {
   border: none;
   padding: 8px;
   border-radius: 4px;
+  background-color: transparent; /* Đặt màu nền trong suốt */
 }
 
 .search-button {
-  background-color: #007bff;
-  color: white;
+  /* background-color: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)); */
+  color: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
   border: none;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-left: 8px;
   cursor: pointer;
 }
+
 /* Dấu gạch chân động khi di chuột vào */
 #portNavbar .nav-item::after {
   content: "";
@@ -164,7 +307,7 @@ html, body {
 }
 
 .shop-now-btn:hover {
-  background-color: rgba(115, 239, 241, 0.7);
+  background-color: #FFD700 ;
   /* background-color:rgb(164, 162, 162); */
   transform: scale(1.08);
 }
@@ -179,12 +322,15 @@ html, body {
 /* PHần products */
 .products-bar {
   height: 15vh;
-  background-color: var(--dark-blue);
+  /* background-color: var(--dark-blue); */
+  background-color: #F2F2F2;
 }
 
+/* Chỉnh product */
 .products {
-  height: 79vh;
-  background-color: #e1e4eb;
+  height: 84vh;
+  /* background-color: #e1e4eb; */
+  background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,24 +340,25 @@ html, body {
 .products-row1 {
   width: 100vw;
   display: flex;
-  margin-top: 150px;
-  justify-content: space-between;
+  margin-top: 50px;
+  justify-content: center; /* Để căn giữa theo chiều ngang */
+  align-items: center; /* Để căn giữa theo chiều dọc */
 }
 
 .products-row1 button {
-  margin: 0px 20px;
+  margin: 0px 10px; /* Điều chỉnh khoảng cách giữa các button */
   padding: 10px 20px;
-  background-color: transparent; /* Loại bỏ màu nền mặc định */
-  color: var(--dark-blue);
-  border: 2px solid rgb(13, 20, 22); /* Viền button */
-  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(15, 1, 1);
+  border: 2px solid rgb(13, 20, 22);
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .products-row1 button:hover {
-  background-color: rgb(137, 215, 244); /* Màu nền khi di chuột qua */
-  color: rgb(243, 245, 247); /* Màu chữ khi di chuột qua */
+  background-color: #FFA500; /* Màu nền khi di chuột qua */
+  color: rgb(0, 0, 0); /* Màu chữ khi di chuột qua */
 }
 
 
@@ -268,6 +415,7 @@ html, body {
   justify-content: center;
 }
 
+/* Màu chữ bottom trong box  */
 .products-btn a {
   color: var(--nav);
 }
@@ -284,7 +432,7 @@ html, body {
   background-color: var(--dark-blue);
 }
 
-/* Đoạn chèn ảnh vào giữa */
+/* Đoạn chèn ảnh vào giữa page 1 */
 .video-container {
   position: relative;
   height: 100vh;
@@ -302,11 +450,11 @@ html, body {
 
 .carouselPort__avatar {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 85%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 140px;
   background: rgba(255, 255, 255, 0);
   border: 7px solid rgba(255, 255, 255, 0);
   border-radius: 50%;

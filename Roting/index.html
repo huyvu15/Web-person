@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 3D Rotating Image Gallery</title>
+    <title>Rotate Image Gallery</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* CSS để đặt thanh nhạc ở center-bottom */
+        audio {
+            position: fixed;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            width: 25%;
+            text-align: center;
+            z-index: 999;
+        }
+    </style>
 </head>
 <body>
+
+    <a href="C:\Users\HI.WELCOME TO NET\Downloads\clone\testing\bg video\index.html" class="back-button">Quay lại</a>
+
     <div class="box">
         <span style="--i:1;"><img src="img/image1.jpg" alt=""></span>
         <span style="--i:2;"><img src="img/image2.jpg" alt=""></span>
@@ -17,5 +33,10 @@
         <span style="--i:7;"><img src="img/image7.jpg" alt=""></span>
         <span style="--i:8;"><img src="img/image8.jpg" alt=""></span>
     </div>
+
+    <audio controls autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
 </body>
 </html>

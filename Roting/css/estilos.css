@@ -11,12 +11,21 @@ body {
     background: url(../img/pexels-eberhard-grossgasteiger-1421903.jpg);
     background-size: cover;
 }
+
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
 .box {
     position: relative;
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
-    animation: animate 20s linear infinite;
+    animation: animate 30s linear infinite;
 }
 @keyframes animate {
     0% {
@@ -45,3 +54,4 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
