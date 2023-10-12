@@ -1,0 +1,330 @@
+:root {
+  --blue: #5ba5d4;
+  --dark-blue: #226c9a;
+  --nav: rgb(221, 238, 253);
+  /* --nav:#ccdeec; */
+}
+.white-text {
+  color: rgb(229, 229, 229);
+}
+
+.background-image {
+  background-image: url('Photo/1.jpg'); /* Đường dẫn tới hình ảnh bạn muốn sử dụng làm nền */
+  background-size: cover; /* Tự động điều chỉnh kích thước hình ảnh để nó phù hợp với kích thước thẻ */
+  background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh nếu cần */
+  /* Các thuộc tính khác tùy thuộc vào yêu cầu của bạn */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.2s linear;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  /* font-family: Helvetica; */
+  color: black;
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  /* overflow-x: hidden; */
+}
+
+/* Style the video */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+     
+/* Mục home  */
+.home {
+  background-image: url("Photo/guitar-bg.jpg");
+  /* background-image: url("adrian-korte-5gn2soeAc40-unsplash.jpg"); */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.home-contents {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  text-align: center;
+}
+
+/* Các thanh đầu */
+.navbar {
+  width: 100vw;
+  overflow: auto;
+  white-space: no-wrap;
+  height: 8vh;
+  background: rgba(225, 231, 234, 0.6); /* Màu trong suốt mờ (điều chỉnh giá trị alpha) */
+  /* background-color: rgb(139, 176, 208); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  backdrop-filter: blur(20px); /* Độ mờ cho nền trong suốt (điều chỉnh giá trị) */
+}
+
+.nav-logo {
+  margin-left: 40px;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  color: rgb(56, 69, 69);
+}
+
+.nav-contents {
+  display: flex;
+}
+
+.nav-contents a {
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+.con {
+  margin-left: 100px;
+}
+
+/* Khi nhấn vào nội dung thì nó chuyển sang màu */
+.nav-contents a:hover {
+  color: rgb(232, 82, 40);
+  transform: scale(1.1);
+}
+
+
+/* Khi nhấn vào nội dung thì nó chuyển sang màu */
+.nav-contents a:hover {
+  color: rgb(232, 82, 40);
+  transform: scale(1.1);
+}
+
+
+/* Search bar  */
+.nav-search {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  background-color: rgba(255, 255, 255, 0.7); /* Màu nền trong suốt */
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.search-input {
+  width: 180px;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+/* Dấu gạch chân động khi di chuột vào */
+#portNavbar .nav-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+
+  background-color: #35a22c;
+
+  display: block;
+
+  transition: all 0.5s;
+}
+
+
+
+
+
+/* button Shop Now */
+.shop-now-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  align-self: center;
+  margin-top: 20px;
+  border: 0.5px solid var(--dark-blue);
+  text-align: center;
+}
+
+.shop-now-btn:hover {
+  background-color: rgba(115, 239, 241, 0.7);
+  /* background-color:rgb(164, 162, 162); */
+  transform: scale(1.08);
+}
+
+.Headings {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* PHần products */
+.products-bar {
+  height: 15vh;
+  background-color: var(--dark-blue);
+}
+
+.products {
+  height: 79vh;
+  background-color: #e1e4eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-row1 {
+  width: 100vw;
+  display: flex;
+  margin-top: 150px;
+  justify-content: space-between;
+}
+
+.products-row1 button {
+  margin: 0px 20px;
+  padding: 10px 20px;
+  background-color: transparent; /* Loại bỏ màu nền mặc định */
+  color: var(--dark-blue);
+  border: 2px solid rgb(13, 20, 22); /* Viền button */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.products-row1 button:hover {
+  background-color: rgb(137, 215, 244); /* Màu nền khi di chuột qua */
+  color: rgb(243, 245, 247); /* Màu chữ khi di chuột qua */
+}
+
+
+.products-row1 div {
+  margin: 0px 100px;
+}
+
+.products-row1 a {
+  margin: 0px 100px;
+  
+}
+
+.products-row1 a:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+
+.products-row2 {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.products-box {
+  background-color: var(--blue);
+  border-radius: 20px;
+  height: 320px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2.5vh;
+  border: 1px solid black;
+
+}
+
+.products-box img {
+  width: 220px;
+  border-radius: 20px;
+  align-self: center;
+  border: 1px solid black;
+}
+
+.products-btn {
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  height: 30px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-btn a {
+  color: var(--nav);
+}
+
+.products-btn a:hover {
+  transform: scale(1.11);
+  cursor: pointer;
+  color: white;
+}
+.products-end{
+  width: 100vw;
+  height: 6vh;
+  margin-top: 110px;
+  background-color: var(--dark-blue);
+}
+
+/* Đoạn chèn ảnh vào giữa */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carouselPort__avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0);
+  border: 7px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+}
+
+.carouselPort__avatar img {
+  background: rgba(255, 255, 255, 0.2);
+  border: 7px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 100%;
+}
+
+.container.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}

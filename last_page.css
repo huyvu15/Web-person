@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Đảm bảo thẻ cha có chiều cao cố định */
+  }
+
+.social-btns a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 50px;
+    perspective: 200px;
+}
+
+.social-btns .box{
+    --box-size: 150px;
+    display: block;
+    height: var(--box-size);
+    width: var(--box-size);
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(calc(var(--box-size) / -2));
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+.social-btns a:hover .box{
+    transform: translateZ(calc(var(--box-size) / -2)) rotateX(90deg);
+}
+
+.social-btns .face{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-btns .front{
+    background-color: hsl(0, 0%, 97%);
+    color: hsl(240, 6%, 16%);
+    transform: translateZ(calc(var(--box-size) / 2));
+}
+
+.social-btns .bottom{
+    background-color: hsl(200, 99%, 44%);
+    color: hsl(0, 0%, 97%);
+    transform: translateY(50%) rotateX(-90deg);
+}
+
+/* Tăng kích thước của icon */
+.social-btns .fab {
+    font-size: 40px; /* Điều chỉnh kích thước icon theo ý muốn */
+}
+
+
+/* Contact in last page */
+
+.contact-info {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info .text p {
+    margin: 0;
+  }
+  
+  .contact-info .icon {
+    display: inline-block;
+    margin-right: 5px;
+  }
