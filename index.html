@@ -13,9 +13,14 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="effect.css">
-    <link rel="stylesheet" href="last_page.css">
+    <!-- <link rel="stylesheet" href="effect.css"> -->
+    <!-- <link rel="stylesheet" href="last_page.css"> -->
+    <!-- <link rel="stylesheet" href="menu.css"> -->
+    <!-- <link href="./css/style.css" rel="stylesheet"/> -->
+    <link href="./css/last_page.css" rel="stylesheet"/>
     <link href="./css/header.css" rel="stylesheet"/>
+    <link href="./css/effect.css" rel="stylesheet"/>
+    <link href="./css/menu.css" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet" />
     <link href="./css/blog.css" rel="stylesheet" />
     <script src="script.js"></script>
@@ -226,12 +231,46 @@
           </span>
       </a>
   </div>
-    <button class="contact-btn">Liên hệ</button>
+    <!-- <button class="contact-btn">Liên hệ</button> -->
     <!-- <div class="contact-btn">
         <p><span class="icon"><i class="fa-solid fa-phone-volume"></i></span>0827 590 544</p>
         <p><span class="icon"><i class="fa-regular fa-envelope"></i></span>huyv80313@gmail.com</p>
         <p><span class="icon"><i class="fa-solid fa-location-dot"></i></span> Ha Noi</p>
     </div> -->
+    <div id="circularMenu" class="circular-menu">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+          <!-- <i class="fa fa-plus"></i> -->
+          <i class="fa-regular fa-star"></i>
+          <!-- <i class="fa fa-bars"></i> -->
+        </a>
+      
+        <menu class="items-wrapper">
+
+          <a href="Post-blog\index.html" class="menu-item fa-solid fa-blog"></a>
+          <a href="Fluid\fluid.html" class="menu-item fa-solid fa-gamepad"></a>
+          <a href="Note\post.html" class="menu-item fa-solid fa-clipboard"></a>
+          <a href="Planet_Ecosystem\planet.html" class="menu-item fa-solid fa-droplet"></a>
+        
+        </menu>
+      
+      </div>
+      
+      
+      <!-- <div id="circularMenu1" class="circular-menu circular-menu-left active">
+      
+        <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+          <i class="fa-regular fa-blog"></i>
+        </a>
+      
+        <menu class="items-wrapper">
+          <a href="#" class="menu-item fa fa-home"></a>
+          <a href="#" class="menu-item fa fa-user"></a>
+          <a href="#" class="menu-item fa fa-pie-chart"></a>
+          <a href="#" class="menu-item fa fa-cog"></a>
+        </menu>
+      
+      </div> -->
 </div>
 <div> 
 <div>  
