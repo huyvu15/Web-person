@@ -13,12 +13,17 @@
   color:#333333;
 }
 
+.about-color {
+  color: #006699; 
+}
+
 /* Cursor Creation */
 .cursor {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 1px solid rgb(240, 161, 14);
+  /* border: 1px solid rgb(240, 161, 14); */
+  border: 1px solid #006699;
   transition: all 200ms ease-out;
   position: fixed;
   pointer-events: none;
@@ -31,7 +36,8 @@
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: rgb(251, 202, 26);
+  /* background-color: rgb(251, 202, 26); */
+  background-color: rgb(45, 210, 255);
   opacity: 0.3;
   position: fixed;
   /* Thay đổi giá trị left và top để đặt vị trí mặc định */
@@ -196,7 +202,7 @@ html, body {
   left: 0;
   right: 100%; /* Bắt đầu với độ rộng 0% */
   height: 2px;
-  background-color: #35a22c; /* Màu gạch chân khi di chuột vào */
+  background-color: #199fcf; /* Màu gạch chân khi di chuột vào */
   transition: right 0.3s ease; /* Thêm hiệu ứng chuyển đổi chiều rộng */
 }
 
@@ -241,7 +247,8 @@ html, body {
 
 /* Khi nhấn vào nội dung thì nó chuyển sang màu */
 .nav-contents a:hover {
-  color:  rgb(0, 255, 0); 
+  /* color:  rgb(0, 255, 0);  */
+  color: #0f8abe; 
   /* color: rgb(232, 82, 40);  */
 
   transform: scale(1.1);
@@ -307,7 +314,7 @@ html, body {
 }
 
 .shop-now-btn:hover {
-  background-color: #FFD700 ;
+  background-color:  #66CCFF;
   /* background-color:rgb(164, 162, 162); */
   transform: scale(1.08);
 }
@@ -323,14 +330,14 @@ html, body {
 .products-bar {
   height: 15vh;
   /* background-color: var(--dark-blue); */
-  background-color: #F2F2F2;
+  background-color: #ebe4df;
 }
 
 /* Chỉnh product */
 .products {
   height: 84vh;
   /* background-color: #e1e4eb; */
-  background-color: #F2F2F2;
+  background-color: #ebe4df;
   display: flex;
   flex-direction: column;
   align-items: center;
