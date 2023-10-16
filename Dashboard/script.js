@@ -1,4 +1,4 @@
-//bar chart không dùng
+//bar chart
 var bar = document.getElementById('bar');
 bar.height = 400
 var barConfig = new Chart(bar, {
