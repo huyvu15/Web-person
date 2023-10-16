@@ -50,11 +50,11 @@
 
     <div class="video-container" id="Home">
         <video playsinline autoplay muted loop>
-            <source src="myvideo1.mp4" type="video/mp4">
+            <source src="myvideo.mp4" type="video/mp4">
         </video>
         <div class="container carousel-caption">
         <div id="container">
-            <div class="typewriter">
+            <div class="typewriter" id="myDiv15">
                 <h1>Hi Guy!</h1>
                 <h1>My name is Huy</h1>
                 <h2>I Want to become to a Data Engineer at Google</h2>
@@ -73,7 +73,7 @@
     <div class="home" id="About-Us">
         <div class="home-contents">
             <div class="page2">
-            <div class="carouselPort__avatar mx-auto center-image" >   <!--   id="myDiv"> -->
+            <div class="carouselPort__avatar mx-auto center-image" id="myDiv10">
                 <img src="img/dz.jpg" alt="huy vu">
                 <h1 class="white-text">Huy Vu Van</h1>
                 <p class="white-text">Data Engineer</p>
@@ -295,10 +295,14 @@
     <script>
         // JavaScript để ẩn thẻ sau 10 giây
         setTimeout(function() {
-            var element = document.getElementById("myDiv");
+            var element = document.getElementById("myDiv10");
             element.style.display = "none";
-        }, 5000); // 10000 mili giây = 10 giây
-
+        }, 10000); // 10000 mili giây = 10 giây
+        // ẩn thẻ sau 15 s
+        setTimeout(function() {
+            var element = document.getElementById("myDiv15");
+            element.style.display = "none";
+        }, 12000); // 10000 mili giây = 10 giây
 
         var cursor = document.querySelector('.cursor');
         var cursor2 = document.querySelector('.cursor2');
