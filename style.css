@@ -388,15 +388,17 @@ html, body {
 /* PHần products */
 .products-bar {
   height: 15vh;
-  /* background-color: var(--dark-blue); */
-  background-color: #ebe4df;
+  background-color: var(--dark-blue);
+  /* background-color: #ffffff; */
+  /* background-color: #ebe4df; */
 }
 
 /* Chỉnh product */
 .products {
   height: 84vh;
   /* background-color: #e1e4eb; */
-  background-color: #ebe4df;
+  /* background-color: #ebe4df; */
+  background-color: #f3f1df;
   display: flex;
   flex-direction: column;
   align-items: center;
