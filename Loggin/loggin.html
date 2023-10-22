@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,13 +14,13 @@
                 <h2 class='animate__heartBeat'>Login</h2>
                 <form>
                     <div class="input-box">
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" id="username">
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="password">
                     </div>
                     <div class="input-box">
-                        <input type="submit" value="Login" href='#'>
+                        <input type="submit" value="Login" href='#' id="login-button">
                     </div>
                 </form>
             </div>
@@ -29,7 +28,30 @@
         <a href="#" class='btn'>Forgot Password</a>
         <a href="#" class='btn signup'>Signup</a>
     </div>
-    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var loginButton = document.getElementById("login-button");
     
-    </html>
-
+            loginButton.addEventListener("click", function(event) {
+                event.preventDefault(); // Ngăn form gửi đi
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+    
+                // Kiểm tra thông tin đăng nhập
+                if (username === "admin" && password === "1") {
+                    // Hiển thị hiệu ứng loading sau 3 giây
+                    loginButton.value = "Logging in...";
+                    loginButton.disabled = true;
+                    setTimeout(function() {
+                        // Chuyển hướng người dùng đến trang khác sau 3 giây
+                        window.location.href = "D:\\Web\\web person\\index.html";
+                    }, 2000);
+                } else {
+                    alert("Tên người dùng hoặc mật khẩu không đúng. Vui lòng thử lại.");
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
