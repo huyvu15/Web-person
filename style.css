@@ -9,6 +9,10 @@
   color: rgb(229, 229, 229);
 }
 
+.ora-text {
+  color: rgb(234, 145, 62);
+}
+
 .color {
   color:#333333;
 }
@@ -109,17 +113,18 @@
 
 /* Hiệu ứng text ban đầu: */
 .typewriter h2 {
-  color: #000000;
+  color: rgb(237, 143, 72);
   font-family: monospace;
   overflow: hidden;
+  margin-left: 10px;
   /* border-right: .15em solid rgb(249, 248, 245); */
-  border-right: .15em solid rgb(0, 0, 0);
+  border-right: .15em solid rgb(227, 120, 38);
   white-space: nowrap;
   margin: 100; /* Thay đổi margin thành 0 để hiển thị bên trái */
   letter-spacing: .15em;
   animation: 
-    typing 3.5s steps(30, end);
-    /* blink-caret .50s step-end infinite; */
+    typing 3.5s steps(30, end),
+    blink-caret .50s step-end infinite;
   
   font-size: 24px; /* Kích thước chữ lớn hơn */
 }
@@ -128,6 +133,7 @@
 .typewriter h1 {
   color: #fff;
   font-family: monospace;
+  margin-left: -10px;
   overflow: hidden;
   /* border-right: .15em solid orange; */
   /* border-right: .15em solid rgb(0, 0, 0); */
@@ -160,7 +166,6 @@
   background-image: url('Photo/1.jpg'); /* Đường dẫn tới hình ảnh bạn muốn sử dụng làm nền */
   background-size: cover; /* Tự động điều chỉnh kích thước hình ảnh để nó phù hợp với kích thước thẻ */
   background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh nếu cần */
-  /* Các thuộc tính khác tùy thuộc vào yêu cầu của bạn */
 }
 
 .background-image1 {
@@ -234,7 +239,7 @@ html, body {
 
 /* Các thanh đầu */
 .navbar {
-  width: 100vw;
+  width: 102.5vw;
   overflow: auto;
   white-space: no-wrap;
   height: 8vh;
@@ -242,9 +247,10 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: fixed;  
   z-index: 100;
-  backdrop-filter: blur(20px); /* Độ mờ cho nền trong suốt (điều chỉnh giá trị) */
+  /* Chỉnh cho thanh bar trên cùng có hiệu ứng mờ */
+  /* backdrop-filter: blur(20px); */
 }
 
 /* Thêm hiệu ứng dấu gạch chân động */
@@ -261,7 +267,7 @@ html, body {
   left: 0;
   right: 100%; /* Bắt đầu với độ rộng 0% */
   height: 2px;
-  background-color: #199fcf; /* Màu gạch chân khi di chuột vào */
+  background-color: #ffffff; /* Màu gạch chân khi di chuột vào */
   transition: right 0.3s ease; /* Thêm hiệu ứng chuyển đổi chiều rộng */
 }
 
@@ -273,18 +279,18 @@ html, body {
 .nav-logo {
   margin-left: 40px;
   font-weight: bolder;
-  font-size: 1.8rem;
+  font-size: 1.25em;
   /* font-family: 'Lobster', cursive;*/
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'Playfair Display', serif;
-  color: #052305;
+  color: #ffffff;
 }
 
 .nav-logo1 {
   flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
-  font-size: 45px;
+  font-size: 30px;
   font-family: 'Lobster', cursive;
   color: rgb(236, 241, 250);
   font-weight: 900;
@@ -293,11 +299,15 @@ html, body {
 
 .nav-contents {
   display: flex;
+  margin-left: 65px
+  
 }
 
 .nav-contents a {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 20px;
+  color: #ffffff; 
+
 }
 
 .con {
@@ -307,7 +317,7 @@ html, body {
 /* Khi nhấn vào nội dung thì nó chuyển sang màu */
 .nav-contents a:hover {
   /* color:  rgb(0, 255, 0);  */
-  color: #0f8abe; 
+  color: #ffffff; 
   /* color: rgb(232, 82, 40);  */
 
   transform: scale(1.1);
@@ -324,24 +334,32 @@ html, body {
   /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)); Màu nền gradient trong suốt */
   padding: 8px;
   border-radius: 4px;
+  color: #ffffff; 
+
 }
 
 .search-input {
-  width: 180px;
+  width: 150px;
   border: none;
   padding: 8px;
+  color: #ffffff; 
+
   border-radius: 4px;
   background-color: transparent; /* Đặt màu nền trong suốt */
 }
 
 .search-button {
   /* background-color: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)); */
-  color: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+  /* color: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));  */
+  color: #ffffff; 
+  
   border: none;
   padding: 8px 12px;
   border-radius: 6px;
   margin-left: 8px;
   cursor: pointer;
+  background-color: transparent; /* Đặt màu nền trong suốt */
+
 }
 
 /* Dấu gạch chân động khi di chuột vào */
@@ -398,7 +416,7 @@ html, body {
   height: 84vh;
   /* background-color: #e1e4eb; */
   /* background-color: #ebe4df; */
-  background-color: #f3f1df;
+  background-color: #f6f6f4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -491,7 +509,7 @@ html, body {
 .products-btn a:hover {
   transform: scale(1.11);
   cursor: pointer;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .products-end{
   width: 100vw;
