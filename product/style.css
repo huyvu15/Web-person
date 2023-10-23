@@ -55,6 +55,9 @@ h3 {
   font-size: 28px;
   line-height: 36px;
 }
+button {
+  outline: none !important;
+}
 /******* Common Element CSS End *********/
 
 /* -------- title style ------- */
