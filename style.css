@@ -51,6 +51,14 @@
   transition: width 0.3s, height 0.3s, opacity 0.3s;
 }
 
+.explore-link {
+  font-size: 24px; /* Cỡ chữ lớn hơn */
+  font-weight: bold; /* Chữ đậm */
+  text-decoration: underline; /* Gạch chân */
+  color: #ff7801; /* Màu chữ (ví dụ: màu xanh) */
+}
+
+
 /* Hiệu ứng scroll down */
 .scroll-down {
   opacity: 1;
