@@ -29,10 +29,12 @@
   .circular-menu .floating-btn i {
     font-size: 1.3em;
     transition: transform .2s;  
+    transition: transform 0.3s; /* Hiệu ứng khi thay đổi kích thước */
   }
   
   .circular-menu.active .floating-btn i {
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */   /* hiệu ứng xoay */
+    transform: scale(1.5); /* Kích thước lớn hơn khi di chuột vào */
   }
   
   .circular-menu:after {
