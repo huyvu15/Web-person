@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-...your-integrity-hash..." crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,7 @@
     <link href="./css/menu.css" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet" />
     <link href="./css/blog.css" rel="stylesheet" />
+    <link href="./css/portfolio.css" rel="stylesheet" />
     <script src="script.js"></script>
     <title>Porfolio</title>
 </head>
@@ -80,7 +82,7 @@
 
 
     
-    <div class="products-bar" id="Products"></div>
+    <!-- <div class="products-bar" id="Products"></div>
     <section class="products">
       <div class="products-row1">
         <button class="shop-button" >Show Now</button>
@@ -110,7 +112,84 @@
             </div>
         </div>
         <div class="products-end"></div>
-    </section>
+    </section> -->
+    <section class="portfolio" id="Products">
+      <div class="container">
+         <div class="row">
+            <div class="title text-center">
+               <h1>Latest Works</h1>
+            </div>
+         </div>
+         <div class="row">
+            <div class="filter-btn">
+               <ul id="filterBtn">
+                  <li class="active" data-target="all">All</li>
+                  <li data-target="web">Web Design</li>
+                  <li data-target="app">App Interface</li>
+                  <li data-target="ui">UI/UX</li>
+               </ul>
+            </div>
+         </div>
+         <div class="row">
+            <div class="gallery">
+               <div class="item" data-id="web">
+                  <div class="inner">
+                     <img src="./img/portfolio/web.jpg" alt="portfolio"/>
+                     <div class="overlay">
+                        <span class="fa fa-plus"></span>
+                        <h4>Web Design</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="item" data-id="web">
+                  <div class="inner">
+                     <img src="./img/portfolio/web2.png" alt="portfolio"/>
+                     <div class="overlay">
+                        <span class="fa fa-plus"></span>
+                        <h4>Web Design</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="item" data-id="app">
+                  <div class="inner">
+                     <img src="./img/portfolio/app.png" alt="portfolio"/>
+                     <div class="overlay">
+                        <span class="fa fa-plus"></span>
+                        <h4>App Interface</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="item" data-id="app">
+                  <div class="inner">
+                     <img src="./img/portfolio/app2.png" alt="portfolio"/>
+                     <div class="overlay">
+                        <span class="fa fa-plus"></span>
+                        <h4>App Interface</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="item" data-id="ui">
+                  <div class="inner">
+                     <img src="./img/portfolio/ui2.png" alt="portfolio"/>
+                     <div class="overlay">
+                        <span class="fa fa-plus"></span>
+                        <h4>UI/UX Design</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="item" data-id="ui">
+                  <div class="inner">
+                     <img src="./img/portfolio/ui3.png" alt="portfolio"/>
+                     <div class="overlay">
+                        <span class="fa fa-plus"></span>
+                        <h4>UI/UX Design</h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 
     <!-- Blog -->
     <section class="blog" id="Blog">
@@ -318,6 +397,7 @@
         });
         
       </script>
+      
 </body>
 
 </html>
