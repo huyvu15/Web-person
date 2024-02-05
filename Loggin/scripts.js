@@ -1,8 +1,3 @@
-/*
-inspiration
-https://dribbble.com/shots/4684682-Aquatic-Animals
-*/
-
 var swiper = new Swiper(".swiper", {
   effect: "coverflow",
   grabCursor: true,

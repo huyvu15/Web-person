@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rotate Image Gallery</title>
     <link rel="stylesheet" href="css/estilos.css">
     <style>
@@ -22,21 +23,26 @@
 <body>
 
     <a href="https://huyvu15.github.io/Web-person/" class="back-button">Quay lại</a>
-
-    <div class="box">
-        <span style="--i:1;"><img src="img/image1.jpg" alt=""></span>
-        <span style="--i:2;"><img src="img/image2.jpg" alt=""></span>
-        <span style="--i:3;"><img src="img/image3.jpg" alt=""></span>
-        <span style="--i:4;"><img src="img/image4.jpg" alt=""></span>
-        <span style="--i:5;"><img src="img/image5.jpg" alt=""></span>
-        <span style="--i:6;"><img src="img/image6.jpg" alt=""></span>
-        <span style="--i:7;"><img src="img/image7.jpg" alt=""></span>
-        <span style="--i:8;"><img src="img/image8.jpg" alt=""></span>
+    <div id="drag-container">
+        <div id="spin-container">
+        <img src="img/image1.jpg" alt="">
+        <img src="img/image2.jpg" alt="">
+        <img src="img/image3.jpg" alt="">
+        <img src="img/image4.jpg" alt="">
+        <img src="img/image5.jpg" alt="">
+        <img src="img/image6.jpg" alt="">
+        <img src="img/image7.jpg" alt="">
+        <img src="img/image8.jpg" alt="">
+    
+    <p>Huy Vũ Love You</p>
     </div>
-
+    <div id="ground"></div>
+    </div>
     <audio controls autoplay>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
 
 </body>
+<script src="style.js"></script>
+
 </html>
